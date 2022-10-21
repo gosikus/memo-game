@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Header from '../header/Header'
-import styled from 'styled-components'
 
 import { generateRandomCardPositions } from './../../common'
 import { OptionsPanel } from '../optionsPanel/OptionsPanel'
