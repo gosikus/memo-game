@@ -7,8 +7,9 @@ export const StyledCard = styled.div`
     color: white;
 
     img {
-        padding: 0.5rem;
+      padding: 0.5rem;
         width: 100%;
+      font-size: 1.5rem;
     }
 
     .card {

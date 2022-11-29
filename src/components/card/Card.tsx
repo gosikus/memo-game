@@ -49,7 +49,7 @@ const Card: FC<CardProps> = ({
 
                 <div className="card__face card__face-back">
                     <img
-                        src="https://www.pngall.com/wp-content/uploads/13/Pokemon-Logo-PNG-Image-File.png"
+                        src="/images/logo.png"
                         alt="card_back"
                     />
                 </div>

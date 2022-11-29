@@ -12,12 +12,14 @@ const MainPage = () => {
     const [steps, setSteps] = useState(0)
     const [cards, setCards] = useState<number[]>(generateRandomCardPositions(5))
     const [gameOver, setGameOver] = useState(false)
+    const [pairsCount, setPairsCount] = useState(5)
 
-    const setPairsCount = (pairs: number) => {
-        console.log(`pairs count: ${pairs}`)
+    const newPairsCount = (pairs: number) => {
+        setPairsCount(pairs)
         const randomCards = generateRandomCardPositions(pairs)
         setCards(randomCards)
     }
+
     const handleGameOver = () => {
         setGameOver(true)
     }
@@ -25,14 +27,14 @@ const MainPage = () => {
     const restartGame = () => {
         setSteps(0)
         setGameOver(false)
-        setPairsCount(5)
+        newPairsCount(pairsCount)
     }
 
     return (
         <StyledMainPage>
             <SparkleStyle />
             <Header />
-            <OptionsPanel setPairsCount={setPairsCount} />
+            <OptionsPanel setPairsCount={newPairsCount} />
             <CardBox
                 cards={cards}
                 handleGameOver={handleGameOver}
